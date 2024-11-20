@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSV Data Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Temperature Over Time</h1>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                const timeLabels = data.map(row => row.Time);
+                const tempValues = data.map(row => row.Temp);
+
+                const ctx = document.getElementById('myChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: timeLabels,
+                        datasets: [{
+                            label: 'Temperature',
+                            data: tempValues,
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { title: { display: true, text: 'Time' }},
+                            y: { title: { display: true, text: 'Temperature' }}
+                        }
+                    }
+                });
+            });
+    </script>
+</body>
+</html>

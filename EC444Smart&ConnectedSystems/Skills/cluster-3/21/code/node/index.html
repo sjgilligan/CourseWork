@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Plotting of Data from Serial Port Using Canvas</title>
+    <!-- Include CanvasJS library -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+</script>
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+        // Create an empty data array for the chart
+        let data_voltage = [];
+        let data_temp = [];
+
+        // Create the chart
+        let chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Time of Day vs Activity Time & Temperature"
+            },
+            axisX: {
+                title: "Time of Day"
+            },
+            axisY: {
+                title: "Activity Time"
+            },
+            axisY2: {
+                title: "Temp"
+            },
+            data: [{
+                type: "line",
+                axisYType: "primary",
+                color: "blue",
+                dataPoints: data_voltage
+            },
+            {
+                type: "line",
+                axisYType: "secondary",
+                color: "red",
+                dataPoints: data_temp
+            }]
+        });
+
+        // Function to update the chart with new data
+        function updateChart(y1, y2) {
+        const now = new Date(); //Prints time of day
+        
+        // Add a new dataPoint to dataPoints array
+        chart.options.data[0].dataPoints.push({x: now, y: y1}); 
+        chart.options.data[1].dataPoints.push({x: now, y: y2});
+            chart.render();
+        }
+
+      //Listen for data delivered to the socket (from the node server)
+        const socket = io.connect();
+        socket.on("data", (data) => {
+        const values = data.split(' ');  // Parse the received data  
+        
+        const voltage = parseInt(values[0]); 
+        const temp = parseFloat(values[1]);
+
+            updateChart(voltage, temp);  // Call function to update values used by CanvasJS
+        });
+    </script>
+</body>
+</html>

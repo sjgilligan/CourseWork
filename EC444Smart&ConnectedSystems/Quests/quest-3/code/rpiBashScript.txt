@@ -1,0 +1,5 @@
+node node_server &
+echo "Node server running!"
+
+python3 mjpeg_server.py &
+echo "Video server running!"

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Plotting of Data from Serial Port Using Canvas</title>
+    <!-- Include CanvasJS library -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+</script>
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+        // Create an empty data array for the chart
+        let data_time = [];
+        let data_temp = [];
+
+        // Create the chart
+        let chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Time of Day vs Activity Time & Temperature"
+            },
+            axisX: {
+                title: "Time of Day"
+            },
+            axisY: {
+                title: "Activity Time"
+            },
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+            data: [{
+                type: "line",
+                legendText: "Sleep", 
+                //legendMarkerColor : markerColor, 
+                dataPoints :dataVSactivitytime
+            }]
+        });
+        let chart2 = new CanvasJS.Chart("chartContainer2", {
+            title: {
+                text: "Time vs Temp"
+            },
+            axisX: {
+                title: "Time"
+            },
+            axisY: {
+=======
+            axisY2: {
+>>>>>>> 455a437582625063620e82c45e907dfeb314e37c
+=======
+            axisY2: {
+>>>>>>> Stashed changes
+                title: "Temp"
+            },
+            data: [{
+                type: "line",
+                axisYType: "primary",
+                dataPoints: data_time
+            },
+            {
+                type: "line",
+                axisYType: "secondary",
+                color: "black",
+                dataPoints: data_temp
+            }]
+        });
+
+        function getActivityColor(activity){ //Function for mapping activity category to line color
+            switch(activity){ 
+                case "active" : 
+                    return "green"; 
+                case "inactive": 
+                    return "blue"
+                case "highly_active": 
+                    return "red"; 
+                default: 
+                    return "gray"; 
+            }
+        }
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        /*
+=======
+
+>>>>>>> Stashed changes
+        // Function to update the chart with new data
+        function updateChart(y1, y2, activity) {
+        const now = new Date(); //Prints time of day
+        
+        const line_color = getActivityColor(activity);
+        chart.options.data[0].color = line_color; //Changes line color based on activity category
+        
+        // Add a new dataPoint to dataPoints array
+	    chart.options.data[0].dataPoints.push({x: now, y: y1}); 
+        chart.options.data[1].dataPoints.push({x: now, y: y2});
+            chart.render();
+        }
+
+<<<<<<< Updated upstream
+            const markerColor = getActivityColor(activity); 
+
+	        chart.options.time.data[0].dataVSactivitytime.push({
+                x: new Date(), 
+                y: time, 
+                legendText: activity, 
+                legendMarkerColor : markerColor, 
+                markerColor: markerColor
+            } ); //UPDATE TIME 
+            
+            chart2.options.time.data[0].dataPoints.push({
+                x: time,
+                y: temp,
+                markerColor: markerColor, 
+                legendText: activity, 
+                legendMarkerColor: markerColor
+            }); //UPDATE CHART 2
+
+            chart.render(); 
+            chart2.render();
+        } */
+=======
+
+        // Function to update the chart with new data
+        function updateChart(y1, y2, activity) {
+        const now = new Date(); //Prints time of day
+        
+        const line_color = getActivityColor(activity);
+        chart.options.data[0].color = line_color; //Changes line color based on activity category
+        
+        // Add a new dataPoint to dataPoints array
+	    chart.options.data[0].dataPoints.push({x: now, y: y1}); 
+        chart.options.data[1].dataPoints.push({x: now, y: y2});
+            chart.render();
+        }
+>>>>>>> 455a437582625063620e82c45e907dfeb314e37c
+
+      //Listen for data delivered to the socket (from the node server)
+        const socket = io.connect();
+<<<<<<< HEAD
+        socket.on("data", (data) => {  //TIME TEMP ACTIVITY
+            console.log("We're connected!");
+            // Parse the received data 
+            console.log('Data received: ', data);
+            const values = data.split(' ');     // ESP sends (time, temp, activity) (separated by a space)
+            //updateChart(values); 
+            console.log(`This is values: ${values}\n`);
+=======
+=======
+      //Listen for data delivered to the socket (from the node server)
+        const socket = io.connect();
+>>>>>>> Stashed changes
+        socket.on("data", (data) => {
+        const values = data.split(' ');  // Parse the received data  
+	    
+        const act_time = parseInt(values[0]); 
+        const temp = parseInt(values[1]);
+        const activity_string = String(values[2]).trim(); //Ensures activity category is in right format for getActivityColor() function
+
+            updateChart(act_time, temp, activity_string);  // Call function to update values used by CanvasJS
+<<<<<<< Updated upstream
+>>>>>>> 455a437582625063620e82c45e907dfeb314e37c
+=======
+>>>>>>> Stashed changes
+        });
+    </script>
+</body>
+</html>

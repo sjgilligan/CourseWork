@@ -1,0 +1,500 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 17:11:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0824ch ( 33356) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00018274 vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00018280 vaddr=3ffb0000 size=021ach (  8620) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=0001a434 vaddr=40080000 size=05be4h ( 23524) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1296ch ( 76140) map[0m
+[0;32mI (167) esp_image: segment 5: paddr=00032994 vaddr=40085be4 size=06a78h ( 27256) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu start user code[0m
+[0;32mI (205) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (205) app_init: Application information:[0m
+[0;32mI (208) app_init: Project name:     main[0m
+[0;32mI (212) app_init: App version:      e75febb[0m
+[0;32mI (217) app_init: Compile time:     Oct 21 2024 17:48:01[0m
+[0;32mI (223) app_init: ELF file SHA256:  dfa743157...[0m
+[0;32mI (229) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (234) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (239) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (249) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (256) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 3FFB2A68 len 0002D598 (181 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 4008C65C len 000139A4 (78 KiB): IRAM[0m
+[0;32mI (288) spi_flash: detected chip: generic[0m
+[0;32mI (292) spi_flash: flash io: dio[0m
+[0;33mW (295) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (309) main_task: Started on CPU0[0m
+[0;32mI (319) main_task: Calling app_main()[0m
+DAC channel 0 value: 2139	DAC channel 1 value: 2099
+[0;32mI (329) main_task: Returned from app_main()[0m
+DAC channel 0 value: 2329	DAC channel 1 value: 2826
+DAC channel 0 value: 3054	DAC channel 1 value: 1581
+DAC channel 0 value:  470	DAC channel 1 value:  995
+DAC channel 0 value:  562	DAC channel 1 value:  974
+DAC channel 0 value:  146	DAC channel 1 value: 1711
+DAC channel 0 value:  410	DAC channel 1 value: 2000
+DAC channel 0 value: 2416	DAC channel 1 value: 2859
+DAC channel 0 value: 4016	DAC channel 1 value: 2753
+DAC channel 0 value: 2497	DAC channel 1 value: 1326
+DAC channel 0 value:  221	DAC channel 1 value: 1102
+DAC channel 0 value: 1771	DAC channel 1 value: 2697
+DAC channel 0 value: 3027	DAC channel 1 value: 2923
+DAC channel 0 value: 3794	DAC channel 1 value: 2047
+DAC channel 0 value: 2283	DAC channel 1 value: 1235
+DAC channel 0 value:  566	DAC channel 1 value: 2117
+DAC channel 0 value: 4013	DAC channel 1 value: 2754
+DAC channel 0 value: 1079	DAC channel 1 value:  965
+DAC channel 0 value:   95	DAC channel 1 value: 1199
+DAC channel 0 value: 1031	DAC channel 1 value: 2416
+DAC channel 0 value:  618	DAC channel 1 value: 2142
+DAC channel 0 value: 3836	DAC channel 1 value: 2823
+DAC channel 0 value: 4095	DAC channel 1 value: 2512
+DAC channel 0 value: 1079	DAC channel 1 value:  966
+DAC channel 0 value:   49	DAC channel 1 value: 1520
+DAC channel 0 value: 2744	DAC channel 1 value: 2907
+DAC channel 0 value: 3423	DAC channel 1 value: 1798
+DAC channel 0 value:  123	DAC channel 1 value: 1680
+DAC channel 0 value: 2412	DAC channel 1 value: 2843
+DAC channel 0 value: 3727	DAC channel 1 value: 2005
+DAC channel 0 value: 3479	DAC channel 1 value: 1839
+DAC channel 0 value:  653	DAC channel 1 value:  966
+DAC channel 0 value:   34	DAC channel 1 value: 1485
+DAC channel 0 value: 1692	DAC channel 1 value: 2669
+DAC channel 0 value: 2409	DAC channel 1 value: 2862
+DAC channel 0 value: 2385	DAC channel 1 value: 1269
+DAC channel 0 value: 1616	DAC channel 1 value: 1076
+DAC channel 0 value:   16	DAC channel 1 value: 1392
+DAC channel 0 value:   80	DAC channel 1 value: 1612
+DAC channel 0 value: 1513	DAC channel 1 value: 2602
+DAC channel 0 value: 1519	DAC channel 1 value: 2640
+DAC channel 0 value: 3388	DAC channel 1 value: 2909
+DAC channel 0 value: 3822	DAC channel 1 value: 2831
+DAC channel 0 value: 3306	DAC channel 1 value: 1729
+DAC channel 0 value: 2462	DAC channel 1 value: 1296
+DAC channel 0 value:  390	DAC channel 1 value: 1008
+DAC channel 0 value:  224	DAC channel 1 value: 1079
+DAC channel 0 value:   19	DAC channel 1 value: 1324
+DAC channel 0 value:  545	DAC channel 1 value:  985
+DAC channel 0 value:   24	DAC channel 1 value: 1171
+DAC channel 0 value:   95	DAC channel 1 value: 1168
+DAC channel 0 value:  589	DAC channel 1 value: 2179
+DAC channel 0 value: 3178	DAC channel 1 value: 2925
+DAC channel 0 value: 4045	DAC channel 1 value: 2215
+DAC channel 0 value: 3898	DAC channel 1 value: 2117
+DAC channel 0 value: 2014	DAC channel 1 value: 1167
+DAC channel 0 value: 2159	DAC channel 1 value: 1190
+DAC channel 0 value:  861	DAC channel 1 value:  963
+DAC channel 0 value: 1114	DAC channel 1 value:  982
+DAC channel 0 value:  842	DAC channel 1 value:  971
+DAC channel 0 value:  511	DAC channel 1 value:  985
+DAC channel 0 value:   48	DAC channel 1 value: 1520
+DAC channel 0 value:  493	DAC channel 1 value:  983
+DAC channel 0 value:  141	DAC channel 1 value: 1134
+DAC channel 0 value:  719	DAC channel 1 value:  966
+DAC channel 0 value:   76	DAC channel 1 value: 1200
+DAC channel 0 value:   80	DAC channel 1 value: 1158
+DAC channel 0 value:  154	DAC channel 1 value: 1711
+DAC channel 0 value:   12	DAC channel 1 value: 1453
+DAC channel 0 value:  240	DAC channel 1 value: 1871
+DAC channel 0 value:  664	DAC channel 1 value: 2181
+DAC channel 0 value: 3583	DAC channel 1 value: 2874
+DAC channel 0 value: 4071	DAC channel 1 value: 2730
+DAC channel 0 value: 3343	DAC channel 1 value: 1749
+DAC channel 0 value: 3158	DAC channel 1 value: 1649
+DAC channel 0 value: 1734	DAC channel 1 value: 1083
+DAC channel 0 value:  546	DAC channel 1 value: 1032
+DAC channel 0 value:  432	DAC channel 1 value: 1995
+DAC channel 0 value: 1745	DAC channel 1 value: 2742
+DAC channel 0 value: 3848	DAC channel 1 value: 2103
+DAC channel 0 value: 2377	DAC channel 1 value: 1287
+DAC channel 0 value:  799	DAC channel 1 value:  974
+DAC channel 0 value:   19	DAC channel 1 value: 1418
+DAC channel 0 value: 2019	DAC channel 1 value: 2752
+DAC channel 0 value: 2624	DAC channel 1 value: 2893
+DAC channel 0 value: 3859	DAC channel 1 value: 2816
+DAC channel 0 value: 3805	DAC channel 1 value: 2832
+DAC channel 0 value: 3542	DAC channel 1 value: 1872
+DAC channel 0 value: 3163	DAC channel 1 value: 1648
+DAC channel 0 value:  173	DAC channel 1 value: 1104
+DAC channel 0 value:   75	DAC channel 1 value: 1231
+DAC channel 0 value: 1371	DAC channel 1 value: 2537
+DAC channel 0 value: 2256	DAC channel 1 value: 2817
+DAC channel 0 value: 4095	DAC channel 1 value: 2292
+DAC channel 0 value: 2963	DAC channel 1 value: 1535
+DAC channel 0 value:  272	DAC channel 1 value: 1858
+DAC channel 0 value: 3968	DAC channel 1 value: 2775
+DAC channel 0 value:  102	DAC channel 1 value: 1216
+DAC channel 0 value: 1520	DAC channel 1 value: 2620
+DAC channel 0 value: 4095	DAC channel 1 value: 2347
+DAC channel 0 value: 2039	DAC channel 1 value: 1164
+DAC channel 0 value:  464	DAC channel 1 value: 2064
+DAC channel 0 value: 3503	DAC channel 1 value: 2896
+DAC channel 0 value: 2075	DAC channel 1 value: 1168
+DAC channel 0 value:  567	DAC channel 1 value:  982
+DAC channel 0 value: 1982	DAC channel 1 value: 2751
+DAC channel 0 value: 3955	DAC channel 1 value: 2249
+DAC channel 0 value:   50	DAC channel 1 value: 1520
+DAC channel 0 value: 2406	DAC channel 1 value: 2852
+DAC channel 0 value: 2558	DAC channel 1 value: 1334
+DAC channel 0 value:   20	DAC channel 1 value: 1407
+DAC channel 0 value: 3910	DAC channel 1 value: 2802
+DAC channel 0 value: 2222	DAC channel 1 value: 1217
+DAC channel 0 value:  308	DAC channel 1 value: 1866
+DAC channel 0 value: 2589	DAC channel 1 value: 2874
+DAC channel 0 value: 2130	DAC channel 1 value: 1193
+DAC channel 0 value:  151	DAC channel 1 value: 1120
+DAC channel 0 value: 3658	DAC channel 1 value: 2873
+DAC channel 0 value: 3467	DAC channel 1 value: 1838
+DAC channel 0 value:   12	DAC channel 1 value: 1341
+DAC channel 0 value: 1443	DAC channel 1 value: 2580
+DAC channel 0 value: 3335	DAC channel 1 value: 1733
+DAC channel 0 value: 1059	DAC channel 1 value:  979
+DAC channel 0 value: 1038	DAC channel 1 value: 2384
+DAC channel 0 value: 2995	DAC channel 1 value: 2923
+DAC channel 0 value: 4077	DAC channel 1 value: 2256
+DAC channel 0 value: 1355	DAC channel 1 value: 1015
+DAC channel 0 value: 1786	DAC channel 1 value: 2689
+DAC channel 0 value: 3357	DAC channel 1 value: 2914
+DAC channel 0 value: 4095	DAC channel 1 value: 2595
+DAC channel 0 value: 3518	DAC channel 1 value: 1854
+DAC channel 0 value:   98	DAC channel 1 value: 1181
+DAC channel 0 value:  636	DAC channel 1 value: 2169
+DAC channel 0 value: 4095	DAC channel 1 value: 2582
+DAC channel 0 value: 1002	DAC channel 1 value: 2384
+DAC channel 0 value: 1680	DAC channel 1 value: 1072
+DAC channel 0 value: 3815	DAC channel 1 value: 2832
+DAC channel 0 value: 2099	DAC channel 1 value: 2780
+DAC channel 0 value:  982	DAC channel 1 value:  973
+DAC channel 0 value: 1594	DAC channel 1 value: 2620
+DAC channel 0 value: 4016	DAC channel 1 value: 2751
+DAC channel 0 value: 2267	DAC channel 1 value: 1222
+DAC channel 0 value:  759	DAC channel 1 value:  971
+DAC channel 0 value: 1130	DAC channel 1 value: 2432
+DAC channel 0 value: 3090	DAC channel 1 value: 2927
+DAC channel 0 value: 3481	DAC channel 1 value: 1843
+DAC channel 0 value:  923	DAC channel 1 value:  971
+DAC channel 0 value: 1770	DAC channel 1 value: 2690
+DAC channel 0 value: 2842	DAC channel 1 value: 2927
+DAC channel 0 value: 3958	DAC channel 1 value: 2161
+DAC channel 0 value: 4095	DAC channel 1 value: 2288
+DAC channel 0 value: 1423	DAC channel 1 value: 1039
+DAC channel 0 value:   21	DAC channel 1 value: 1216
+DAC channel 0 value: 1790	DAC channel 1 value: 2694
+DAC channel 0 value: 3274	DAC channel 1 value: 2925
+DAC channel 0 value: 3526	DAC channel 1 value: 1858
+DAC channel 0 value: 2511	DAC channel 1 value: 1325
+DAC channel 0 value:  577	DAC channel 1 value:  987
+DAC channel 0 value:  108	DAC channel 1 value: 1203
+DAC channel 0 value: 2346	DAC channel 1 value: 2829
+DAC channel 0 value: 3443	DAC channel 1 value: 1813
+DAC channel 0 value:   30	DAC channel 1 value: 1535
+DAC channel 0 value:  501	DAC channel 1 value: 2065
+DAC channel 0 value: 2685	DAC channel 1 value: 2890
+DAC channel 0 value: 3793	DAC channel 1 value: 2830
+DAC channel 0 value: 2695	DAC channel 1 value: 1399
+DAC channel 0 value:  670	DAC channel 1 value:  967
+DAC channel 0 value:  822	DAC channel 1 value: 2303
+DAC channel 0 value: 3454	DAC channel 1 value: 2907
+DAC channel 0 value: 3265	DAC channel 1 value: 1699
+DAC channel 0 value: 3179	DAC channel 1 value: 1669
+DAC channel 0 value: 1535	DAC channel 1 value: 1038
+DAC channel 0 value: 2555	DAC channel 1 value: 1335
+DAC channel 0 value:  400	DAC channel 1 value: 1012
+DAC channel 0 value:  180	DAC channel 1 value: 1125
+DAC channel 0 value: 3788	DAC channel 1 value: 2832
+DAC channel 0 value:  715	DAC channel 1 value:  971
+DAC channel 0 value: 3424	DAC channel 1 value: 2908
+DAC channel 0 value: 4095	DAC channel 1 value: 2355
+DAC channel 0 value: 2405	DAC channel 1 value: 1275
+DAC channel 0 value: 2075	DAC channel 1 value: 1183
+DAC channel 0 value:  194	DAC channel 1 value: 1108
+DAC channel 0 value:   17	DAC channel 1 value: 1345
+DAC channel 0 value:  835	DAC channel 1 value: 2320
+DAC channel 0 value: 1782	DAC channel 1 value: 2691
+DAC channel 0 value: 4095	DAC channel 1 value: 2347
+DAC channel 0 value: 1263	DAC channel 1 value: 1002
+DAC channel 0 value:  240	DAC channel 1 value: 1867
+DAC channel 0 value: 1671	DAC channel 1 value: 2663
+DAC channel 0 value: 3984	DAC channel 1 value: 2759
+DAC channel 0 value: 4095	DAC channel 1 value: 2381
+DAC channel 0 value:  228	DAC channel 1 value: 1091
+DAC channel 0 value:  380	DAC channel 1 value: 1964
+DAC channel 0 value: 3124	DAC channel 1 value: 2923
+DAC channel 0 value: 3568	DAC channel 1 value: 2878
+DAC channel 0 value: 3447	DAC channel 1 value: 1841
+DAC channel 0 value: 2371	DAC channel 1 value: 1275
+DAC channel 0 value:  211	DAC channel 1 value: 1791
+DAC channel 0 value:  170	DAC channel 1 value: 1697
+DAC channel 0 value: 1264	DAC channel 1 value: 2525
+DAC channel 0 value: 1967	DAC channel 1 value: 2736
+DAC channel 0 value: 3344	DAC channel 1 value: 2903
+DAC channel 0 value: 3965	DAC channel 1 value: 2782
+DAC channel 0 value: 4083	DAC channel 1 value: 2256
+DAC channel 0 value: 3967	DAC channel 1 value: 2163
+DAC channel 0 value: 3377	DAC channel 1 value: 1793
+DAC channel 0 value: 1183	DAC channel 1 value:  981
+DAC channel 0 value:  169	DAC channel 1 value: 1762
+DAC channel 0 value: 2221	DAC channel 1 value: 2811
+DAC channel 0 value: 4095	DAC channel 1 value: 2357
+DAC channel 0 value: 4095	DAC channel 1 value: 2471
+DAC channel 0 value: 3495	DAC channel 1 value: 1872
+DAC channel 0 value: 3189	DAC channel 1 value: 1665
+DAC channel 0 value: 1439	DAC channel 1 value: 1034
+DAC channel 0 value:  123	DAC channel 1 value: 1665
+DAC channel 0 value: 4095	DAC channel 1 value: 2497
+DAC channel 0 value: 1637	DAC channel 1 value: 1066
+DAC channel 0 value: 1006	DAC channel 1 value: 2391
+DAC channel 0 value: 3805	DAC channel 1 value: 2834
+DAC channel 0 value: 1365	DAC channel 1 value: 1013
+DAC channel 0 value:  134	DAC channel 1 value: 1095
+DAC channel 0 value: 1604	DAC channel 1 value: 2625
+DAC channel 0 value: 3934	DAC channel 1 value: 2783
+DAC channel 0 value: 2431	DAC channel 1 value: 1287
+DAC channel 0 value:  270	DAC channel 1 value: 1061
+DAC channel 0 value: 1264	DAC channel 1 value: 2514
+DAC channel 0 value: 3788	DAC channel 1 value: 2830
+DAC channel 0 value: 2452	DAC channel 1 value: 1303
+DAC channel 0 value: 1782	DAC channel 1 value: 1095
+DAC channel 0 value:   16	DAC channel 1 value: 1431
+DAC channel 0 value:  368	DAC channel 1 value: 1936
+DAC channel 0 value: 2841	DAC channel 1 value: 2926
+DAC channel 0 value: 3648	DAC channel 1 value: 2877
+DAC channel 0 value: 3434	DAC channel 1 value: 1809
+DAC channel 0 value: 2503	DAC channel 1 value: 1328
+DAC channel 0 value:  172	DAC channel 1 value: 1137
+DAC channel 0 value:  923	DAC channel 1 value: 2339
+DAC channel 0 value: 4095	DAC channel 1 value: 2471
+DAC channel 0 value: 2161	DAC channel 1 value: 1146
+DAC channel 0 value:  277	DAC channel 1 value: 1863
+DAC channel 0 value: 1776	DAC channel 1 value: 2693
+DAC channel 0 value: 3263	DAC channel 1 value: 1707
+DAC channel 0 value:   51	DAC channel 1 value: 1251
+DAC channel 0 value: 2723	DAC channel 1 value: 2903
+DAC channel 0 value: 4095	DAC channel 1 value: 2387
+DAC channel 0 value:   36	DAC channel 1 value: 1286
+DAC channel 0 value: 2348	DAC channel 1 value: 2844
+DAC channel 0 value: 3312	DAC channel 1 value: 1735
+DAC channel 0 value:   23	DAC channel 1 value: 1397
+DAC channel 0 value: 4095	DAC channel 1 value: 2379
+DAC channel 0 value:  570	DAC channel 1 value:  979
+DAC channel 0 value: 3833	DAC channel 1 value: 2820
+DAC channel 0 value:  922	DAC channel 1 value:  970
+DAC channel 0 value: 2650	DAC channel 1 value: 2894
+DAC channel 0 value: 3559	DAC channel 1 value: 1899
+DAC channel 0 value:   19	DAC channel 1 value: 1378
+DAC channel 0 value: 1432	DAC channel 1 value: 2559
+DAC channel 0 value: 4095	DAC channel 1 value: 2416
+DAC channel 0 value: 1616	DAC channel 1 value: 1068
+DAC channel 0 value:  568	DAC channel 1 value: 2118
+DAC channel 0 value: 3905	DAC channel 1 value: 2805
+DAC channel 0 value:  976	DAC channel 1 value:  962
+DAC channel 0 value:  128	DAC channel 1 value: 1715
+DAC channel 0 value: 2960	DAC channel 1 value: 2925
+DAC channel 0 value: 4095	DAC channel 1 value: 2511
+DAC channel 0 value:   75	DAC channel 1 value: 1147
+DAC channel 0 value: 2169	DAC channel 1 value: 2791
+DAC channel 0 value: 3833	DAC channel 1 value: 2081
+DAC channel 0 value: 2222	DAC channel 1 value: 1199
+DAC channel 0 value:  129	DAC channel 1 value: 1715
+DAC channel 0 value: 3363	DAC channel 1 value: 2912
+DAC channel 0 value: 1403	DAC channel 1 value: 1009
+DAC channel 0 value:  138	DAC channel 1 value: 1703
+DAC channel 0 value: 2896	DAC channel 1 value: 2922
+DAC channel 0 value: 3503	DAC channel 1 value: 2893
+DAC channel 0 value: 3723	DAC channel 1 value: 2000
+DAC channel 0 value: 2647	DAC channel 1 value: 1387
+DAC channel 0 value:  130	DAC channel 1 value: 1095
+DAC channel 0 value: 1069	DAC channel 1 value: 2418
+DAC channel 0 value: 2044	DAC channel 1 value: 1152
+DAC channel 0 value: 1520	DAC channel 1 value: 2656
+DAC channel 0 value: 2608	DAC channel 1 value: 1371
+DAC channel 0 value:   34	DAC channel 1 value: 1274
+DAC channel 0 value: 3682	DAC channel 1 value: 2863
+DAC channel 0 value:  669	DAC channel 1 value:  967
+DAC channel 0 value: 2493	DAC channel 1 value: 2863
+DAC channel 0 value: 2963	DAC channel 1 value: 1535
+DAC channel 0 value: 2211	DAC channel 1 value: 2800
+DAC channel 0 value: 1567	DAC channel 1 value: 1046
+DAC channel 0 value: 3325	DAC channel 1 value: 2922
+DAC channel 0 value:  607	DAC channel 1 value:  968
+DAC channel 0 value: 3985	DAC channel 1 value: 2810
+DAC channel 0 value: 2606	DAC channel 1 value: 1362
+DAC channel 0 value:  624	DAC channel 1 value: 2176
+DAC channel 0 value: 3417	DAC channel 1 value: 2903
+DAC channel 0 value:  720	DAC channel 1 value:  967
+DAC channel 0 value:  904	DAC channel 1 value: 2341
+DAC channel 0 value: 3240	DAC channel 1 value: 2919
+DAC channel 0 value: 3462	DAC channel 1 value: 1824
+DAC channel 0 value:   71	DAC channel 1 value: 1230
+DAC channel 0 value:  956	DAC channel 1 value: 2345
+DAC channel 0 value: 4095	DAC channel 1 value: 2674
+DAC channel 0 value: 3934	DAC channel 1 value: 2139
+DAC channel 0 value: 1743	DAC channel 1 value: 1088
+DAC channel 0 value:  304	DAC channel 1 value: 1040
+DAC channel 0 value:  967	DAC channel 1 value: 2358
+DAC channel 0 value: 3264	DAC channel 1 value: 2924
+DAC channel 0 value: 1559	DAC channel 1 value: 1053
+DAC channel 0 value:  614	DAC channel 1 value: 2114
+DAC channel 0 value: 4095	DAC channel 1 value: 2618
+DAC channel 0 value: 1509	DAC channel 1 value: 1050
+DAC channel 0 value: 2304	DAC channel 1 value: 2824
+DAC channel 0 value: 4095	DAC channel 1 value: 2320
+DAC channel 0 value:   48	DAC channel 1 value: 1248
+DAC channel 0 value: 3090	DAC channel 1 value: 2921
+DAC channel 0 value: 3165	DAC channel 1 value: 1635
+DAC channel 0 value:   79	DAC channel 1 value: 1200
+DAC channel 0 value: 3120	DAC channel 1 value: 2924
+DAC channel 0 value: 3335	DAC channel 1 value: 1742
+DAC channel 0 value:  363	DAC channel 1 value: 1968
+DAC channel 0 value: 3868	DAC channel 1 value: 2855
+DAC channel 0 value:  487	DAC channel 1 value:  997
+DAC channel 0 value: 3056	DAC channel 1 value: 2924
+DAC channel 0 value:  342	DAC channel 1 value: 1033
+DAC channel 0 value: 2323	DAC channel 1 value: 2832
+DAC channel 0 value: 2631	DAC channel 1 value: 1390
+DAC channel 0 value:   23	DAC channel 1 value: 1388
+DAC channel 0 value: 3855	DAC channel 1 value: 2142
+DAC channel 0 value:   48	DAC channel 1 value: 1232
+DAC channel 0 value: 3888	DAC channel 1 value: 2114
+DAC channel 0 value: 1007	DAC channel 1 value: 2389
+DAC channel 0 value:  270	DAC channel 1 value: 1081
+DAC channel 0 value: 3887	DAC channel 1 value: 2800
+DAC channel 0 value:   80	DAC channel 1 value: 1202
+DAC channel 0 value: 4011	DAC channel 1 value: 2753
+DAC channel 0 value:  126	DAC channel 1 value: 1670
+DAC channel 0 value: 3495	DAC channel 1 value: 2890
+DAC channel 0 value: 1163	DAC channel 1 value:  979
+DAC channel 0 value:  305	DAC channel 1 value: 1898
+DAC channel 0 value: 4095	DAC channel 1 value: 2515
+DAC channel 0 value: 1599	DAC channel 1 value: 1053
+DAC channel 0 value: 1453	DAC channel 1 value: 2609
+DAC channel 0 value: 3751	DAC channel 1 value: 2021
+DAC channel 0 value:   23	DAC channel 1 value: 1376
+DAC channel 0 value:  859	DAC channel 1 value: 2298
+DAC channel 0 value: 4043	DAC channel 1 value: 2742
+DAC channel 0 value: 3929	DAC channel 1 value: 2127
+DAC channel 0 value:  660	DAC channel 1 value:  972
+DAC channel 0 value:   33	DAC channel 1 value: 1501
+DAC channel 0 value: 2267	DAC channel 1 value: 2817
+DAC channel 0 value: 3595	DAC channel 1 value: 2862
+DAC channel 0 value: 2758	DAC channel 1 value: 1426
+DAC channel 0 value:  235	DAC channel 1 value: 1094
+DAC channel 0 value: 3057	DAC channel 1 value: 2922
+DAC channel 0 value: 3407	DAC channel 1 value: 1785
+DAC channel 0 value:   41	DAC channel 1 value: 1509
+DAC channel 0 value: 1616	DAC channel 1 value: 2630
+DAC channel 0 value: 2806	DAC channel 1 value: 1482
+DAC channel 0 value:   36	DAC channel 1 value: 1285
+DAC channel 0 value: 3033	DAC channel 1 value: 2922
+DAC channel 0 value: 4059	DAC channel 1 value: 2187
+DAC channel 0 value:   46	DAC channel 1 value: 1553
+DAC channel 0 value: 2699	DAC channel 1 value: 2902
+DAC channel 0 value: 2883	DAC channel 1 value: 1488
+DAC channel 0 value:  720	DAC channel 1 value:  966
+DAC channel 0 value: 1613	DAC channel 1 value: 2640
+DAC channel 0 value: 3502	DAC channel 1 value: 2895
+DAC channel 0 value: 2014	DAC channel 1 value: 1147
+DAC channel 0 value:   64	DAC channel 1 value: 1657
+DAC channel 0 value: 4095	DAC channel 1 value: 2699
+DAC channel 0 value: 1756	DAC channel 1 value: 1101
+DAC channel 0 value:  179	DAC channel 1 value: 1751
+DAC channel 0 value:  115	DAC channel 1 value: 1678
+DAC channel 0 value: 1125	DAC channel 1 value: 2486
+DAC channel 0 value: 2233	DAC channel 1 value: 2814
+DAC channel 0 value: 3679	DAC channel 1 value: 2001
+DAC channel 0 value:  735	DAC channel 1 value:  973
+DAC channel 0 value:  325	DAC channel 1 value: 1907
+DAC channel 0 value: 1840	DAC channel 1 value: 2706
+DAC channel 0 value: 2651	DAC channel 1 value: 1377
+DAC channel 0 value:   16	DAC channel 1 value: 1378
+DAC channel 0 value: 3117	DAC channel 1 value: 2926
+DAC channel 0 value: 2938	DAC channel 1 value: 1513
+DAC channel 0 value:  843	DAC channel 1 value: 2338
+DAC channel 0 value: 4095	DAC channel 1 value: 2578
+DAC channel 0 value: 1085	DAC channel 1 value:  970
+DAC channel 0 value:   19	DAC channel 1 value: 1456
+DAC channel 0 value: 2362	DAC channel 1 value: 2849
+DAC channel 0 value: 3856	DAC channel 1 value: 2820
+DAC channel 0 value: 2385	DAC channel 1 value: 1267
+DAC channel 0 value:  543	DAC channel 1 value: 1007
+DAC channel 0 value: 2507	DAC channel 1 value: 2863
+DAC channel 0 value: 2913	DAC channel 1 value: 1511
+DAC channel 0 value:  606	DAC channel 1 value: 2117
+DAC channel 0 value: 2757	DAC channel 1 value: 2909
+DAC channel 0 value: 2523	DAC channel 1 value: 1330
+DAC channel 0 value:  146	DAC channel 1 value: 1712
+DAC channel 0 value: 3133	DAC channel 1 value: 2923
+DAC channel 0 value: 3971	DAC channel 1 value: 2190
+DAC channel 0 value:   80	DAC channel 1 value: 1138
+DAC channel 0 value:  273	DAC channel 1 value: 1828
+DAC channel 0 value: 3760	DAC channel 1 value: 2838
+DAC channel 0 value: 4095	DAC channel 1 value: 2288
+DAC channel 0 value: 1330	DAC channel 1 value: 1001
+DAC channel 0 value:  109	DAC channel 1 value: 1168
+DAC channel 0 value: 2097	DAC channel 1 value: 2785
+DAC channel 0 value: 4095	DAC channel 1 value: 2533
+DAC channel 0 value:  593	DAC channel 1 value:  988
+DAC channel 0 value: 1750	DAC channel 1 value: 2754
+DAC channel 0 value:  837	DAC channel 1 value:  966
+DAC channel 0 value:   19	DAC channel 1 value: 1347
+DAC channel 0 value: 2106	DAC channel 1 value: 2785
+DAC channel 0 value: 3356	DAC channel 1 value: 2903
+DAC channel 0 value: 2342	DAC channel 1 value: 1219
+DAC channel 0 value:   37	DAC channel 1 value: 1469
+DAC channel 0 value: 4095	DAC channel 1 value: 2294
+DAC channel 0 value:  662	DAC channel 1 value:  965
+DAC channel 0 value: 1900	DAC channel 1 value: 2730
+DAC channel 0 value: 4095	DAC channel 1 value: 2430
+DAC channel 0 value:  400	DAC channel 1 value: 1017
+DAC channel 0 value:  651	DAC channel 1 value: 2186
+DAC channel 0 value: 4095	DAC channel 1 value: 2559
+DAC channel 0 value: 2955	DAC channel 1 value: 1520
+DAC channel 0 value:  107	DAC channel 1 value: 1657
+DAC channel 0 value: 2656	DAC channel 1 value: 2891
+DAC channel 0 value: 1521	DAC channel 1 value: 1033
+DAC channel 0 value:  198	DAC channel 1 value: 1783
+DAC channel 0 value: 4095	DAC channel 1 value: 2703
+DAC channel 0 value: 2269	DAC channel 1 value: 1226
+DAC channel 0 value: 2320	DAC channel 1 value: 2827
+DAC channel 0 value: 3343	DAC channel 1 value: 1735
+DAC channel 0 value:  370	DAC channel 1 value: 1984
+DAC channel 0 value: 3664	DAC channel 1 value: 2864
+DAC channel 0 value: 1023	DAC channel 1 value:  965
+DAC channel 0 value: 1308	DAC channel 1 value: 2523
+DAC channel 0 value: 2687	DAC channel 1 value: 1410
+DAC channel 0 value:  890	DAC channel 1 value: 2302
+DAC channel 0 value: 3199	DAC channel 1 value: 1664
+DAC channel 0 value:   51	DAC channel 1 value: 1249
+DAC channel 0 value: 3494	DAC channel 1 value: 2894
+DAC channel 0 value: 2877	DAC channel 1 value: 1566
+DAC channel 0 value:  451	DAC channel 1 value: 2032

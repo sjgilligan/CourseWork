@@ -1,0 +1,19 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d5323: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d56e8: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082cdd: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d3864: buzzer_task at C:/Espressif/frameworks/esp-idf-v5.3.1/EC444/Team4-Blaizot-Cruanes-Diallo-Gilligan/quest-3/code/buzzer/main/buzzer_main.c:48
+0x400859dd: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d5323: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d56e8: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082cdd: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d3864: buzzer_task at C:/Espressif/frameworks/esp-idf-v5.3.1/EC444/Team4-Blaizot-Cruanes-Diallo-Gilligan/quest-3/code/buzzer/main/buzzer_main.c:48
+0x400859dd: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

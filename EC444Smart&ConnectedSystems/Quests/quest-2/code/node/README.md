@@ -1,0 +1,1 @@
+Node folder contains the node modules and necessary packages for node to run. In the serial-canvas.js file we have the serial port code to read in sensor data and write to the index.html file. Index.html contains the code to parse the values of time, temp, and activity to then update and render the two charts, Date vs Activity Time and Time vs Temperature. 

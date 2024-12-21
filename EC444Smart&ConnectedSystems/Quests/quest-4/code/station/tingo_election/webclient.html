@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Database</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: black;        /* Set text color */
+            font-size: 2em;      /* Increase font size */
+            text-align: center;  /* Align the title to the center */
+        }
+</style>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+</script>
+<body>
+    <h1>Election Database</h1> <!-- Title placed here -->
+    <div id="chartContainer" style="height: 0; width: 100%;"></div>
+    
+    <div>
+        <strong>Red Total:</strong> <span id="redTotal">0</span>
+    </div>
+    <div>
+        <strong>Blue Total:</strong> <span id="blueTotal">0</span>
+    </div>
+
+    <button onclick="resetDB()">Reset Database</button>
+    <button onclick="updateDB()">Update</button> 
+
+    <script>
+      
+        // Function to update the chart with new data
+        function createTable(data) {
+            console.log("UPDATE CHART CALLED"); 
+            let table = document.getElementById("dataTable"); 
+
+            if (!table) { //if table does not exist
+                table = document.createElement("table"); // create table
+                table.id = "dataTable";
+                table.style.border = "1px solid black";
+                table.style.borderCollapse = "collapse";
+
+                // Add a header row
+                const headerRow = document.createElement("tr");
+                ["ID", "Vote", "Time"].forEach(headerText => { //header of table
+                    const headerCell = document.createElement("th");
+                    headerCell.textContent = headerText;
+                    headerCell.style.border = "1px solid black";
+                    headerCell.style.padding = "8px";
+                    headerRow.appendChild(headerCell);
+                });
+                table.appendChild(headerRow);
+
+                // Append the table to the body or another container
+                document.body.appendChild(table);
+            }
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            let redTotal = 0;
+            let blueTotal = 0;
+            data.forEach((rowData) => {
+                const row = document.createElement("tr");
+
+                // Loop through each cell in the row array
+   
+                const cell0 = document.createElement("td");
+                cell0.textContent = rowData.ID;
+                cell0.style.bor0der = "1px solid black";
+                cell0.style.padding = "8px";
+                row.appendChild(cell0);
+
+                const cell2 = document.createElement("td");
+                cell2.textContent = rowData.Vote;
+                cell2.style.border = "1px solid black";
+                cell2.style.padding = "8px";
+                row.appendChild(cell2);
+
+                const cell3 = document.createElement("td");
+                cell3.textContent = rowData.Time;
+                cell3.style.border = "1px solid black";
+                cell3.style.padding = "8px";
+                row.appendChild(cell3);
+
+                table.appendChild(row);
+                // Increment counters based on vote
+                if (rowData.Vote === "R") {
+                    redTotal++;
+                } else if (rowData.Vote === "B") {
+                    blueTotal++;
+                }
+
+                // Update the totals display
+                document.getElementById("redTotal").textContent = redTotal;
+                document.getElementById("blueTotal").textContent = blueTotal;
+            });
+
+            
+        }
+
+      //Listen for data delivered to the socket (from the node server)
+        const socket = io.connect();
+        socket.on("data", (data) => { //data should be a matrix (2D array)
+            console.log("data: ", data); 
+            createTable(data);  // Call function to update values used by CanvasJS
+        });
+
+        //FUNCTION TO RESET DB 
+        function resetDB(){ 
+            const message = "resetDB"; 
+            socket.emit("reset database", message); 
+            console.log("RESET BUTTON RECEIVED");
+        }
+        function updateDB(){ 
+            const message = "update"; 
+            socket.emit("update", message); 
+            console.log("UPDATE BUTTON RECEIVED");
+        }
+    </script>
+</body>
